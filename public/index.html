@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Flyrank Capstone — Get in touch with Muhammad Umar"
+    />
+    <title>Contact | Flyrank Capstone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/" class="logo">Flyrank<span>Capstone</span></a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">AI-Assisted Development</p>
+        <h1>Let's build something great together</h1>
+        <p class="hero-text">
+          Have a question about the capstone project or want to connect? Send a
+          message and I'll get back to you.
+        </p>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-card">
+          <div class="contact-info">
+            <h2>Get in touch</h2>
+            <p>
+              Fill out the form and your message will be saved securely. I
+              typically respond within 1–2 business days.
+            </p>
+            <ul class="contact-details">
+              <li>
+                <span class="detail-label">Project</span>
+                <span>Flyrank.Ai Capstone</span>
+              </li>
+              <li>
+                <span class="detail-label">Author</span>
+                <span>Muhammad Umar</span>
+              </li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Your name"
+                  required
+                />
+                <span class="field-error" data-error="name"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <span class="field-error" data-error="email"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What's this about?"
+                required
+              />
+              <span class="field-error" data-error="subject"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me more..."
+                required
+              ></textarea>
+              <span class="field-error" data-error="message"></span>
+            </div>
+
+            <div id="form-status" class="form-status" role="status" hidden></div>
+
+            <button type="submit" class="submit-btn" id="submit-btn">
+              Send message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Muhammad Umar · Flyrank.Ai Capstone</p>
+    </footer>
+
+    <script src="/js/contact.js" type="module"></script>
+  </body>
+</html>

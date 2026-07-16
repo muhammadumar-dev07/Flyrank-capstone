@@ -50,13 +50,25 @@ cd Flyrank-capstone
 
 ### 2. Install dependencies
 
-When application dependencies are added:
-
 ```bash
 npm install
 ```
 
-### 3. Environment configuration
+### 3. Run the development server
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site and contact form.
+
+For auto-restart on file changes:
+
+```bash
+npm run dev
+```
+
+### 4. Environment configuration
 
 Create a local environment file when required:
 
@@ -95,10 +107,20 @@ docs: update README with setup instructions
 
 ```
 Flyrank-capstone/
-├── README.md          # Project documentation
-├── .gitignore         # Ignored files and directories
-├── Cursor rules       # AI assistant and coding guidelines
-└── License            # Project license
+├── public/              # Static frontend (HTML, CSS, JS)
+│   ├── css/
+│   ├── js/
+│   └── index.html
+├── src/                 # Server-side modules
+│   └── validateContact.js
+├── data/                # Contact submissions (gitignored)
+├── server.js            # Express server & contact API
+├── package.json
+├── .env.example         # Environment variable template
+├── README.md            # Project documentation
+├── .gitignore           # Ignored files and directories
+├── cursor_rules         # AI assistant and coding guidelines
+└── License              # Project license
 ```
 
 ## Project Status
@@ -108,6 +130,7 @@ Flyrank-capstone/
 | Repository initialization | Complete |
 | Development environment setup | Complete |
 | Core application development | In progress |
+| Contact form | Complete |
 
 ## License
 
