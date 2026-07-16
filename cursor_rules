@@ -1,0 +1,94 @@
+# Flyrank Capstone — AI Assistant Rules
+
+Guidelines for AI-assisted development in this repository. Follow these rules when writing code, suggesting changes, or updating documentation.
+
+---
+
+## Project Context
+
+This is the capstone repository for the **Flyrank.Ai AI-Assisted Development** track. The goal is to build software with AI tooling while maintaining professional engineering standards: clean code, clear Git history, and up-to-date documentation.
+
+---
+
+## Tech Stack
+
+- **Runtime:** Node.js (LTS)
+- **Language:** Modern JavaScript (ES6+)
+- **Version Control:** Git & GitHub
+- **IDE:** Cursor
+
+---
+
+## Code Style
+
+- Use modern JavaScript (ES6+): `const`/`let`, arrow functions, destructuring, async/await where appropriate
+- Write readable, modular code — one responsibility per function or module
+- Prefer descriptive variable and function names over abbreviations
+- Keep functions small and focused; extract logic when a block grows hard to follow
+- Match existing patterns in the codebase before introducing new abstractions
+- Avoid over-engineering — use the simplest correct solution
+
+---
+
+## Git & Commits
+
+- Follow [Conventional Commits](https://www.conventionalcommits.org/)
+- Use clear, descriptive commit messages in the format: `<type>: <short description>`
+
+**Common types:**
+
+| Type | Use for |
+|------|---------|
+| `feat` | New features |
+| `fix` | Bug fixes |
+| `docs` | Documentation only |
+| `refactor` | Code changes that neither fix bugs nor add features |
+| `chore` | Maintenance, tooling, or config updates |
+
+**Examples:**
+
+```
+feat: add user authentication module
+fix: resolve null reference in data parser
+docs: update README with setup instructions
+```
+
+- Do not commit unless explicitly asked
+- Never commit secrets, credentials, or `.env` files
+
+---
+
+## Documentation
+
+- Keep `README.md` updated when setup steps, structure, or workflow change
+- Add comments only for non-obvious business logic or technical decisions
+- Prefer self-explanatory code over excessive inline comments
+
+---
+
+## AI-Assisted Development
+
+When generating or modifying code:
+
+1. **Read before writing** — inspect surrounding files and follow existing conventions
+2. **Minimize scope** — change only what the task requires; avoid unrelated edits
+3. **Verify changes** — run relevant commands or checks when applicable
+4. **Explain trade-offs** — when multiple approaches exist, briefly note the chosen approach and why
+5. **Stay honest about status** — do not document features or behavior that are not yet implemented
+
+---
+
+## Security
+
+- Never hardcode API keys, tokens, or passwords
+- Use environment variables for sensitive configuration
+- Respect `.gitignore` — do not add `node_modules/`, `.env`, or IDE-specific files to version control
+
+---
+
+## Workflow
+
+1. Create a feature branch from `main`
+2. Implement changes following the conventions above
+3. Commit with Conventional Commit messages when requested
+4. Open a pull request for review before merging to `main`
