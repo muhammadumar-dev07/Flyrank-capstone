@@ -27,6 +27,9 @@ This is the capstone repository for the **Flyrank.Ai AI-Assisted Development** t
 - Keep functions small and focused; extract logic when a block grows hard to follow
 - Match existing patterns in the codebase before introducing new abstractions
 - Avoid over-engineering — use the simplest correct solution
+- For new standalone pages, use server-root asset URLs (`/css/...`, `/js/...`) so Express static middleware resolves styles and scripts correctly
+- Keep validator logic separate when new forms have different fields; reuse shared persistence functions instead of duplicating save logic
+- When disabling form submission, show a clear inline status hint and use ARIA associations so users understand why the button is inactive
 
 ---
 
