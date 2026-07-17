@@ -3,6 +3,7 @@ const crypto = require("crypto");
 const fs = require("fs/promises");
 const path = require("path");
 const { validateContact } = require("./src/validateContact");
+const { validateContact2 } = require("./src/validateContact2");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -47,6 +48,29 @@ app.post("/api/contact", async (req, res) => {
     });
   } catch (err) {
     console.error("Failed to save contact submission:", err);
+    return res.status(500).json({
+      success: false,
+      message: "Something went wrong. Please try again later.",
+    });
+  }
+});
+
+// New endpoint for the second contact form (contact2)
+app.post("/api/contact2", async (req, res) => {
+  const { isValid, errors, data } = validateContact2(req.body);
+
+  if (!isValid) {
+    return res.status(400).json({ success: false, errors });
+  }
+
+  try {
+    await saveContact(data);
+    return res.status(201).json({
+      success: true,
+      message: "Thank you! Your message has been received.",
+    });
+  } catch (err) {
+    console.error("Failed to save contact2 submission:", err);
     return res.status(500).json({
       success: false,
       message: "Something went wrong. Please try again later.",

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact (Form 2) | Flyrank Capstone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/contact2.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/" class="logo">Flyrank<span>Capstone</span></a>
+        <a href="/" class="nav-link">Home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <div class="contact-card">
+          <div class="contact-info">
+            <h2>Contact — Form 2</h2>
+            <p class="muted">Professional, clean interface. Please provide the details and send your message.</p>
+          </div>
+
+          <form id="contact2-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c2-name">Name</label>
+                <input id="c2-name" name="name" type="text" placeholder="Your full name" autocomplete="name" required />
+                <span class="field-error" data-error="name"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="c2-email">Email</label>
+                <input id="c2-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+                <span class="field-error" data-error="email"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="c2-phone">Phone</label>
+              <input id="c2-phone" name="phone" type="tel" placeholder="+1 (555) 555-5555" inputmode="tel" required />
+              <span class="field-error" data-error="phone"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="c2-message">Message</label>
+              <textarea id="c2-message" name="message" rows="6" placeholder="Tell me about your project or question..." required></textarea>
+              <span class="field-error" data-error="message"></span>
+            </div>
+
+            <div id="form2-status" class="form-status" role="status" hidden></div>
+
+            <button type="submit" class="submit-btn" id="submit2-btn" aria-describedby="submit-hint" disabled>
+              Send message
+            </button>
+            <div id="submit-hint" class="submit-hint" aria-hidden="false">Please complete all required fields correctly to enable the Send message button.</div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Muhammad Umar · Flyrank.Ai Capstone</p>
+    </footer>
+
+    <script src="/js/contact2.js" type="module"></script>
+  </body>
+</html>
