@@ -36,4 +36,4 @@ Review Effort
 - Test both server endpoints and review validators for missing or malformed input.
 - Confirm the standalone page loads CSS and JavaScript successfully from `/css` and `/js` paths.
 - Check accessibility via keyboard navigation, live hint visibility, and inline error feedback.
-- Ensure the new contact page remains a standalone experience while the existing homepage form continues to work as before.
+- Ensure the new contact page remains a standalone experience while the existing homepage form continues to work as before. fdr
